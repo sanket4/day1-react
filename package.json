@@ -1,0 +1,31 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "this is react learning session to have hands on react",
+  "scripts": {
+    "start": "parcel index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanket4/day1-react.git"
+  },
+  "keywords": [],
+  "author": "sanket arak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sanket4/day1-react/issues"
+  },
+  "homepage": "https://github.com/sanket4/day1-react#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browsersList": [
+    "last 2 versions"
+  ]
+}
