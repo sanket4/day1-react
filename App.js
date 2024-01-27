@@ -6,8 +6,9 @@ const TitleComponent = () => <h1> TitleComponent</h1>;
 const FunctionalComponent = () => (
   <div id="sad">
     <TitleComponent />
-    {TitleComponent()}
+
     <h1> FunctionalComponent</h1>
+    {TitleComponent()}
     <TitleComponent></TitleComponent>
   </div>
 );
