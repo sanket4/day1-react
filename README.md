@@ -1,6 +1,7 @@
 # react
 
 # bundler which is parcel
+
     - it makes our life easy
     - create dev build with command npx parcel index.html --> here we specifying the entry point of the app
     - local server hosting
@@ -10,4 +11,10 @@
     - Image Optimization
     - Minification
     - Bundling
-    - compressing 
+    - compressing
+
+# food app
+
+// header -- logo and nav items
+// body -- search bar, restaurantContainer, restaurantCard
+// footer -- links, copyright

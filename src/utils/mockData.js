@@ -1,54 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-// header -- logo and nav items
-// body -- search bar, restaurantContainer, restaurantCard
-// footer -- links, copyright
-
-const Header = () => {
-  return (
-    <div className="header">
-      <div className="logo-container">
-        <img
-          className="logo"
-          src="https://logo.com/image-cdn/images/kts928pd/production/11e5681ac3b77c52480a1748abb1950ba40e4884-357x358.png?w=1080&q=72"
-        ></img>
-      </div>
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
-
-const RestaurantCard = (props) => {
-  console.log("props", props);
-  const { name, cuisines, avgRating, costForTwo, sla, cloudinaryImageId } =
-    props.resData.info;
-  return (
-    <div className="res-card">
-      <img
-        className="card-img"
-        alt="sona chinese"
-        src={
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
-          cloudinaryImageId
-        }
-      ></img>
-      <h3>{name}</h3>
-      <h4>{cuisines.join(", ")}</h4>
-      <h4>{avgRating}</h4>
-      <h4>{costForTwo}</h4>
-      <h4>{sla.deliveryTime} minutes</h4>
-    </div>
-  );
-};
-
 const resObject = [
   {
     "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
@@ -688,28 +637,4 @@ const resObject = [
   },
 ];
 
-const Body = () => {
-  return (
-    <div className="body">
-      <div className="searchBar">Search</div>
-      <div className="res-container">
-        {resObject.map((res) => (
-          <RestaurantCard key={res.info.id} resData={res} />
-        ))}
-      </div>
-    </div>
-  );
-};
-
-const AppLayout = () => {
-  return (
-    <div className="app">
-      <Header />
-      <Body />
-    </div>
-  );
-};
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(<AppLayout />);
+export default resObject;
