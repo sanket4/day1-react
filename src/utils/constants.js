@@ -2,4 +2,7 @@ export const CDN_URL =
   "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
 export const LOGO_URL =
-  "https://logo.com/image-cdn/images/kts928pd/production/11e5681ac3b77c52480a1748abb1950ba40e4884-357x358.png?w=1080&q=72";
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfNBbjc0sH5oX4TUdf88Y3YtsQusfU1nrhTCSUa3VkOHuUUTkcmvdqF_l_bQ&s";
+
+export const MENU_URL =
+  "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9715987&lng=77.5945627&restaurantId=";
