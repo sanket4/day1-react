@@ -6,7 +6,6 @@ const RestaurantMenu = () => {
   const { resId } = useParams();
 
   const resInfo = useRestaurantMenu(resId);
-
   if (resInfo === null) {
     return <Shimmer />;
   }
@@ -15,8 +14,6 @@ const RestaurantMenu = () => {
 
   const { itemCards } =
     resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
-
-  console.log("itemCards", itemCards);
 
   return (
     <div className="menu">
