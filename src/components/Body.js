@@ -31,18 +31,18 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body">
-      <div className="filter">
-        <div className="searchBar">
+      <div className="filter flex">
+        <div className="searchBar m-4 p-4">
           <input
             type="text"
-            className="input-bar"
+            className="input-bar border border-solid border-black rounded-lg"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
           />
           <button
-            className="search-btn"
+            className="search-btn m-4 px-4 py-2 bg-green-100 rounded-lg shadow-lg hover:border border-gray-300"
             onClick={() => {
               const filteredSearch = restaurantList.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
@@ -54,19 +54,21 @@ const Body = () => {
             Search
           </button>
         </div>
-        <button
-          className="filter-btn"
-          onClick={() => {
-            const filteredList = restaurantList.filter(
-              (res) => res.info.avgRating > 4
-            );
-            setFilteredRestaurant(filteredList);
-          }}
-        >
-          Top Rated Restaurants
-        </button>
+        <div className="m-4 p-4">
+          <button
+            className="filter-btn m-4 px-4 py-2 bg-green-100 rounded-lg shadow-lg hover:border border-gray-300"
+            onClick={() => {
+              const filteredList = restaurantList.filter(
+                (res) => res.info.avgRating > 4
+              );
+              setFilteredRestaurant(filteredList);
+            }}
+          >
+            Top Rated Restaurants
+          </button>
+        </div>
       </div>
-      <div className="res-container">
+      <div className="res-container flex flex-wrap mb-6">
         {filteredRestaurant.map((res) => (
           <Link key={res.info.id} to={"/restaurants/" + res.info.id}>
             <RestaurantCard resData={res} />
