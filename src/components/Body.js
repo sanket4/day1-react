@@ -8,8 +8,6 @@ const Body = () => {
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
 
-  console.log("restaurantList", restaurantList);
-
   const RatedestaurantCardPromoted = withPromotedLabel(RestaurantCard);
 
   useEffect(() => {
@@ -52,7 +50,6 @@ const Body = () => {
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
               );
               setFilteredRestaurant(filteredSearch);
-              console.log("search clicked", filteredSearch);
             }}
           >
             Search

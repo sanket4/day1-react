@@ -21,7 +21,6 @@ const RestaurantCard = (props) => {
 
 export const withPromotedLabel = (RestaurantCard) => {
   return (props) => {
-    console.log(props?.resData?.info?.aggregatedDiscountInfoV3?.header);
     return (
       <div>
         <label className="absolute bg-red-400 text-white rounded-lg m-2 p-2">
