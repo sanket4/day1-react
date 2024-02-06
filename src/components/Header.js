@@ -14,7 +14,7 @@ const Header = () => {
       </div>
       <div className="nav-items">
         <ul className="flex p-6 m-6">
-          <li className="p-3  hover:border rounded-lg border-gray-300">
+          <li className="p-3  rounded-lg border-gray-300">
             Online Status : {onlineStatus ? "🟢" : "🔴"}
           </li>
           <li className="p-3  hover:border rounded-lg border-gray-300">
