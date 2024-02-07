@@ -35,7 +35,6 @@ const RestaurantMenu = () => {
         </h2>
         <h2 className="font-bold py-2">Menu</h2>
         <div className="">
-          {showIndex}
           {categories.map((category, index) => (
             <RestaurantCategory
               key={category?.card?.card?.title}
@@ -52,3 +51,5 @@ const RestaurantMenu = () => {
   );
 };
 export default RestaurantMenu;
+
+
