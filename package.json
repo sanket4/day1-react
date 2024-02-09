@@ -4,7 +4,8 @@
   "description": "this is react learning session to have hands on react",
   "scripts": {
     "start": "parcel index.html",
-    "test": "jest"
+    "test": "jest",
+    "watch-test":"jest --watch"
   },
   "repository": {
     "type": "git",
