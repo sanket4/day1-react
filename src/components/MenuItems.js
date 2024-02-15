@@ -12,7 +12,11 @@ const MenuItems = ({ items }) => {
   return (
     <div>
       {items.map((item) => (
-        <div className="grid grid-rows-1 grid-flow-col" key={item.card.info.id}>
+        <div
+          data-testid="menuItems"
+          className="grid grid-rows-1 grid-flow-col"
+          key={item.card.info.id}
+        >
           <div className="grid grid-cols-3 gap-2 m-4 p-4  shadow-lg rounded-lg border bg-gray-50 border-gray-300">
             <div className="col-span-2">
               <h4 className="font-bold py-2">{item.card.info.name}</h4>
